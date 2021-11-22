@@ -1,0 +1,20 @@
+
+<IfModule mod_rewrite.c>
+# Activar RewriteEngine
+RewriteEngine on
+
+RewriteBase /
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^(.*)$ $1.php
+
+</IfModule>
+
+
+php_value upload_max_filesize 750M
+php_value post_max_size 750M
+php_value max_execution_time 7500
+php_value max_input_time 7500
+
+
